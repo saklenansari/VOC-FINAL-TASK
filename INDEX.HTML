@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven - Your Online Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">Book<span>Haven</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#bestsellers">Bestsellers</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Discover Your Next Favorite Book</h1>
+            <p>Browse our extensive collection of books across all genres. From bestsellers to hidden gems, we have something for every reader.</p>
+            <a href="#featured" class="btn">Browse Books</a>
+            <a href="#" class="btn btn-outline" id="addBookBtn">Add New Book</a>
+        </div>
+    </section>
+
+    <section class="container" id="featured">
+        <h2 class="section-title">Featured Books</h2>
+        <div class="books" id="featuredBooks">
+            <!-- Books will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <section class="container" id="bestsellers">
+        <h2 class="section-title">Bestsellers</h2>
+        <div class="books" id="bestsellerBooks">
+            <!-- Books will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="copyright">© 2023 BookHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add Book Modal -->
+    <div class="modal" id="bookModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Add New Book</h3>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <form id="bookForm">
+                <div class="form-group">
+                    <label for="bookTitle">Title</label>
+                    <input type="text" id="bookTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookAuthor">Author</label>
+                    <input type="text" id="bookAuthor" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookPrice">Price ($)</label>
+                    <input type="number" id="bookPrice" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookCategory">Category</label>
+                    <select id="bookCategory" required>
+                        <option value="">Select a category</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="science-fiction">Science Fiction</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="biography">Biography</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bookDescription">Description</label>
+                    <textarea id="bookDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="bookImage">Image URL</label>
+                    <input type="text" id="bookImage" required>
+                </div>
+                <button type="submit" class="btn">Add Book</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
